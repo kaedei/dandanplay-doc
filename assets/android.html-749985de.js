@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4d362294","path":"/guide/android.html","title":"安卓版","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1696692752000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":1}]},"filePathRelative":"guide/android.md"}');export{e as data};

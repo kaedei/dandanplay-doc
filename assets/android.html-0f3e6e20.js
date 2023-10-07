@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as o,a as e,b as r}from"./app-8fee20c6.js";const c={},n=e("h1",{id:"安卓版",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#安卓版","aria-hidden":"true"},"#"),r(" 安卓版")],-1),s=[n];function d(_,i){return t(),o("div",null,s)}const l=a(c,[["render",d],["__file","android.html.vue"]]);export{l as default};

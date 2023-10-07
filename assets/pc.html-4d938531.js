@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-a0f1cf4c","path":"/guide/pc.html","title":"PC版","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1696692752000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":1}]},"filePathRelative":"guide/pc.md"}');export{e as data};

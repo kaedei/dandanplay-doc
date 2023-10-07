@@ -1,0 +1,1 @@
+import{_ as c,o as t,c as a,a as e,b as o}from"./app-8fee20c6.js";const r={},s=e("h1",{id:"pc版",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#pc版","aria-hidden":"true"},"#"),o(" PC版")],-1),n=[s];function _(d,i){return t(),a("div",null,n)}const l=c(r,[["render",_],["__file","pc.html.vue"]]);export{l as default};
