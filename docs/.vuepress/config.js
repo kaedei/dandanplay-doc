@@ -4,6 +4,7 @@ export default ({
     lang: 'zh-CN',
     title: '弹弹play',
     description: '这是弹弹play帮助文档',
+    base: '/dandanplay-doc/',
     theme: defaultTheme({
         logo: '/images/logo.png',
         repo: 'https://www.dandanplay.com/',
