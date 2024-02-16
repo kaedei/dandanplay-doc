@@ -1,113 +1,96 @@
-<h1>使用弹弹play在线服务翻译字幕文件</h1>
+# 使用弹弹play在线服务翻译字幕文件
 
-<p><span style="font-size:16px;">※ 「在线翻译字幕」为弹弹play会员功能</span></p>
+※ 「在线翻译字幕」为弹弹play会员功能
 
-<p><span style="font-size:16px;">从PC 13.3版开始，弹弹play支持使用在线服务为您翻译AI语音识别出的文本，也可以用来翻译字幕文件。</span></p>
+从PC 13.3版开始，弹弹play支持使用在线服务为您翻译AI语音识别出的文本，也可以用来翻译字幕文件。
 
-<p><span style="font-size:16px;">「AI语音识别」功能介绍： <a href="https://support.qq.com/products/104929/faqs/138503" target="_blank" rel="noreferrer noopener">https://support.qq.com/products/104929/faqs/138503</a></span></p>
+「AI语音识别」功能介绍： [https://support.qq.com/products/104929/faqs/138503](https://support.qq.com/products/104929/faqs/138503)
 
-<p> </p>
+## 功能特点
 
-<p><span style="font-size:16px;"><strong>功能特点</strong></span></p>
+- AI语音识别后一键导入识别结果开始翻译
+- 可以自选使用哪个翻译服务（Azure Translator / ChatGPT）
+- 翻译速度快，几分钟内就可翻译一个字幕文件
+- 支持数十种语言的翻译，支持自动识别源语言
+- 初步翻译后就地编辑结果，或是清除一部分翻译结果并重试
+- 完成后可以导出翻译后的字幕，支持导出双语字幕
 
-<ul><li><span style="font-size:16px;">AI语音识别后一键导入识别结果开始翻译</span></li>
-	<li><span style="font-size:16px;">可以自选使用哪个翻译服务（Azure Translator / ChatGPT）</span></li>
-	<li><span style="font-size:16px;">翻译速度快，几分钟内就可翻译一个字幕文件</span></li>
-	<li><span style="font-size:16px;">支持数十种语言的翻译，支持自动识别源语言</span></li>
-	<li><span style="font-size:16px;">初步翻译后就地编辑结果，或是清除一部分翻译结果并重试</span></li>
-	<li><span style="font-size:16px;">完成后可以导出翻译后的字幕，支持导出双语字幕</span></li>
-</ul><p> </p>
+## 使用方法
 
-<p><span style="font-size:16px;"><strong>使用方法</strong></span></p>
+可以通过多种方式进入此功能：
 
-<p><span style="font-size:16px;">可以通过多种方式进入此功能：</span></p>
+&lt;1&gt; 在AI语音识别完成后，点击下方的 【翻译字幕】 按钮：
 
-<p><span style="font-size:16px;">&lt;1&gt; 在AI语音识别完成后，点击下方的 【翻译字幕】 按钮：</span></p>
+![](https://txc.gtimg.com/data/104929/2023/1130/aa37869aa9347ed38f224ac11ab15734.png)
 
-<p style="text-align:center;"><img height="239" src="https://txc.gtimg.com/data/104929/2023/1130/aa37869aa9347ed38f224ac11ab15734.png" width="600" alt="aa37869aa9347ed38f224ac11ab15734.png" /></p>
+&lt;2&gt; 在播放器界面右键菜单中，选择【弹弹play AI - AI字幕翻译】
 
-<p><span style="font-size:16px;">&lt;2&gt; 在播放器界面右键菜单中，选择【弹弹play AI - AI字幕翻译】</span></p>
+![](https://txc.gtimg.com/data/104929/2023/1130/a6018e724798a6eb1c11acf256510d9e.png)
 
-<p style="text-align:center;"><img height="263" src="https://txc.gtimg.com/data/104929/2023/1130/a6018e724798a6eb1c11acf256510d9e.png" width="600" alt="a6018e724798a6eb1c11acf256510d9e.png" /></p>
+&lt;3&gt; 在播放器【调整】边栏，选择【AI字幕翻译】：
 
-<p><span style="font-size:16px;">&lt;3&gt; 在播放器【调整】边栏，选择【AI字幕翻译】：</span></p>
+![](https://txc.gtimg.com/data/104929/2023/1130/0093591c6676d2558ca609ec5e69f753.png)
 
-<p style="text-align:center;"><img height="220" src="https://txc.gtimg.com/data/104929/2023/1130/0093591c6676d2558ca609ec5e69f753.png" width="526" alt="0093591c6676d2558ca609ec5e69f753.png" /></p>
+将会提示您选择一个本地 srt 或 ass 格式的字幕文件，选择后将打开【翻译字幕】窗口：
 
-<p> </p>
+![](https://txc.gtimg.com/data/104929/2023/1130/9da3f9c0a792d0a57cb9e94ca9e53336.png)
 
-<p><span style="font-size:16px;">将会提示您选择一个本地 srt 或 ass 格式的字幕文件，选择后将打开【翻译字幕】窗口：</span></p>
+## 翻译字幕
 
-<p style="text-align:center;"><img height="438" src="https://txc.gtimg.com/data/104929/2023/1130/9da3f9c0a792d0a57cb9e94ca9e53336.png" width="600" alt="9da3f9c0a792d0a57cb9e94ca9e53336.png" /></p>
+点击下方的 [翻译字幕] 按钮即可对全部字幕进行翻译。
 
-<p> </p>
+翻译完成后可以点击 [导出字幕文件] 将翻译结果生成 SRT 格式的字幕，后续可以使用播放器播放。支持导出双语字幕。
 
-<p><span style="font-size:16px;"><strong>翻译字幕</strong></span></p>
+## 翻译服务
 
-<p><span style="font-size:16px;">点击下方的 [翻译字幕] 按钮即可对全部字幕进行翻译。</span></p>
+您可以手动选择使用一个在线服务进行翻译。当前我们支持的在线翻译服务提供商：
 
-<p><span style="font-size:16px;">翻译完成后可以点击 [导出字幕文件] 将翻译结果生成 SRT 格式的字幕，后续可以使用播放器播放。支持导出双语字幕。</span></p>
+- Azure 翻译服务（默认）
+- ChatGPT
 
-<p> </p>
+由于在线翻译服务价格不同，各个翻译服务每个月也将有独立、不同的使用额度。使用 Azure 翻译服务时，每一次翻译字幕的操作将消耗 1 次使用额度。使用 ChatGPT 服务时，将按翻译的字符（token）数量计算额度。
 
-<p><span style="font-size:16px;"><strong>翻译服务</strong></span></p>
+当前弹弹play会员用户的月额度上限是：（文档可能会更新不及时，请以软件中提示为准）
 
-<p><span style="font-size:16px;">您可以手动选择使用一个在线服务进行翻译。当前我们支持的在线翻译服务提供商：</span></p>
+- Azure 翻译服务：60次/月
+- ChatGPT：100,000 token/月
 
-<ul><li><span style="font-size:16px;">Azure 翻译服务（默认）</span></li>
-	<li><span style="font-size:16px;">ChatGPT</span></li>
-</ul><p><span style="font-size:16px;">由于在线翻译服务价格不同，各个翻译服务每个月也将有独立、不同的使用额度。使用 Azure 翻译服务时，每一次翻译字幕的操作将消耗 1 次使用额度。使用 ChatGPT 服务时，将按翻译的字符（token）数量计算额度。</span></p>
+关于token：token 简单来说是 ChatGPT 用来计算文字的单位，一般来说，一个汉字或一个英文单词差不多等于 1.3 个token，汉字由于会出现生僻字，结果可能会偏多。
 
-<p><span style="font-size:16px;">当前弹弹play会员用户的月额度上限是：（文档可能会更新不及时，请以软件中提示为准）</span></p>
+当使用 Azure 翻译字数较多的字幕文件时，弹弹play会自动将其分割成多个小文件后进行多次翻译，此时将消耗多次额度。当前，每超过 10,000 个字符（只计算待翻译文本，并非字幕文件长度）将会触发一次分割。
 
-<ul><li><span style="font-size:16px;">Azure 翻译服务：60次/月</span></li>
-	<li><span style="font-size:16px;">ChatGPT：100,000 token/月</span></li>
-</ul><p><span style="font-size:16px;">关于token：token 简单来说是 ChatGPT 用来计算文字的单位，一般来说，一个汉字或一个英文单词差不多等于 1.3 个token，汉字由于会出现生僻字，结果可能会偏多。</span></p>
+ChatGPT 翻译由于成本较高等原因，将使用按字符计费的方式。按照我们的计算，当前月额度可以翻译约 20 个时长24分钟的TV动画的字幕，通常来说日常、剧情类动画消耗字符较多，战斗类动画消耗字符较少。
 
-<p><span style="font-size:16px;">当使用 Azure 翻译字数较多的字幕文件时，弹弹play会自动将其分割成多个小文件后进行多次翻译，此时将消耗多次额度。当前，每超过 10,000 个字符（只计算待翻译文本，并非字幕文件长度）将会触发一次分割。</span></p>
+完成翻译后，将弹窗提示您本次使用翻译服务的额度消耗数字以及剩余额度。当您使用完某个翻译服务的额度后，可以继续使用其他还有额度的翻译服务。当所有翻译服务的额度都被消耗至零，本月将无法再使用在线翻译字幕功能。
 
-<p><span style="font-size:16px;">ChatGPT 翻译由于成本较高等原因，将使用按字符计费的方式。按照我们的计算，当前月额度可以翻译约 20 个时长24分钟的TV动画的字幕，通常来说日常、剧情类动画消耗字符较多，战斗类动画消耗字符较少。</span></p>
+![](https://txc.gtimg.com/data/104929/2023/0505/dffa6685c654f66db5370380bc1a9d2e.png)
 
-<p><span style="font-size:16px;">完成翻译后，将弹窗提示您本次使用翻译服务的额度消耗数字以及剩余额度。当您使用完某个翻译服务的额度后，可以继续使用其他还有额度的翻译服务。当所有翻译服务的额度都被消耗至零，本月将无法再使用在线翻译字幕功能。</span></p>
+## 语言设置
 
-<p style="text-align:center;"><img height="192" src="https://txc.gtimg.com/data/104929/2023/0505/dffa6685c654f66db5370380bc1a9d2e.png" width="500" alt="dffa6685c654f66db5370380bc1a9d2e.png" /></p>
+在线翻译服务支持数十种语言的互相翻译，您可以在“原始语言”和“目标语言”处选择。”原始语言“支持语言自动检测。
 
-<p> </p>
+![](https://txc.gtimg.com/data/104929/2023/0330/22a55e4ef431fa8288dac956c27f66fc.png)
 
-<p> </p>
+## 重试和编辑
 
-<p><span style="font-size:16px;"><strong>语言设置</strong></span></p>
+**重试**：在翻译时，会默认跳过之前已经翻译完成过的句子。如果您之前已经将字幕文件完整翻译过一遍，再次点击 [翻译字幕] 将不会消耗额度。
 
-<p><span style="font-size:16px;">在线翻译服务支持数十种语言的互相翻译，您可以在“原始语言”和“目标语言”处选择。”原始语言“支持语言自动检测。</span></p>
+在识别结果列表点开右键菜单，可以清除已选中的翻译文本（使用Ctrl/Shift多选），或是清除当前所有翻译结果。再次点击【翻译字幕】时，将重新联网尝试翻译它们。
 
-<p style="text-align:center;"><img height="356" src="https://txc.gtimg.com/data/104929/2023/0330/22a55e4ef431fa8288dac956c27f66fc.png" width="500" alt="22a55e4ef431fa8288dac956c27f66fc.png" /></p>
+ChatGPT 在重试局部翻译时，将自动进入“慢速”模式，此模式下翻译速度会变慢，但成功率和翻译质量会提高。
 
-<p> </p>
+**编辑**：双击任何原始文本或翻译文本，可以就地编辑其内容，方便在翻译前修正原文错误，或是优化翻译结果。
 
-<p><span style="font-size:16px;"><strong>重试和编辑</strong></span></p>
+![](https://txc.gtimg.com/data/104929/2023/0505/274a7cc30b0fed99d9539b3efe656cdf.png)
 
-<p><span style="font-size:16px;"><strong>重试</strong>：在翻译时，会默认跳过之前已经翻译完成过的句子。如果您之前已经将字幕文件完整翻译过一遍，再次点击 [翻译字幕] 将不会消耗额度。</span></p>
+## 输出字幕
 
-<p><span style="font-size:16px;">在识别结果列表点开右键菜单，可以清除已选中的翻译文本（使用Ctrl/Shift多选），或是清除当前所有翻译结果。再次点击【翻译字幕】时，将重新联网尝试翻译它们。</span></p>
+您可以选择输出字幕的内容，原始语言、目标（翻译后的）语言、或是生成双语字幕。
 
-<p><span style="font-size:16px;">ChatGPT 在重试局部翻译时，将自动进入“慢速”模式，此模式下翻译速度会变慢，但成功率和翻译质量会提高。</span></p>
+导出的双语字幕将按照上方原始语言，下方目标语言的方式排列。
 
-<p><span style="font-size:16px;"><strong>编辑</strong>：双击任何原始文本或翻译文本，可以就地编辑其内容，方便在翻译前修正原文错误，或是优化翻译结果。</span></p>
+![](https://txc.gtimg.com/data/104929/2023/0330/93135c7259d2d5c2c96b4c7d863f4ce7.png)
 
-<p style="text-align:center;"><img height="180" src="https://txc.gtimg.com/data/104929/2023/0505/274a7cc30b0fed99d9539b3efe656cdf.png" width="600" alt="274a7cc30b0fed99d9539b3efe656cdf.png" /></p>
+## 意见反馈
 
-<p> </p>
-
-<p><span style="font-size:16px;"><strong>输出字幕</strong></span></p>
-
-<p><span style="font-size:16px;">您可以选择输出字幕的内容，原始语言、目标（翻译后的）语言、或是生成双语字幕。</span></p>
-
-<p><span style="font-size:16px;">导出的双语字幕将按照上方原始语言，下方目标语言的方式排列。</span></p>
-
-<p style="text-align:center;"><img height="338" src="https://txc.gtimg.com/data/104929/2023/0330/93135c7259d2d5c2c96b4c7d863f4ce7.png" width="600" alt="93135c7259d2d5c2c96b4c7d863f4ce7.png" /></p>
-
-<p> </p>
-
-<p><span style="font-size:16px;"><strong>意见反馈</strong></span></p>
-
-<p><span style="font-size:16px;">如果您对在线翻译功能有意见或建议，或是出现当前限额不够使用等情况，可以到本社区中进行反馈。或是通过弹弹play右上角“反馈”按钮联系我们。</span></p>
+如果您对在线翻译功能有意见或建议，或是出现当前限额不够使用等情况，可以到本社区中进行反馈。或是通过弹弹play右上角“反馈”按钮联系我们。

@@ -1,75 +1,64 @@
-<h1>弹弹play + dmitriRender 插帧教程</h1>
+# 弹弹play + AMD Fluid Motion 插帧教程
 
-<p> 弹弹play 10.2新版本中增加了EVR内核对 dmitriRender 插帧软件的支持。如果您已经安装了 dmitriRender，那么就可以方便地在弹弹play中一键开启并使用了。</p>
+弹弹play支持基于 AMD Fluid Motion 技术的插帧。首先，根据AMD官方对此技术的描述，您需要拥有一张采用 AMD Radeon 芯片+支持GCN1.1架构的显卡。
 
-<p>* 请注意，dmitriRender目前是付费软件，您可以在付费前免费试用一段时间。</p>
+其次，您需要安装最新版本的 AMD显卡驱动程序，以及 Bluesky Frame Rate Converter （简称为BFRC）这款软件。
 
-<p>* dmitriRender 5.0版本后，只支持64位软件，所以您需要安装<strong>64位弹弹play播放器</strong>配合使用。</p>
+最后，由于弹弹play本身的渲染机制，对于CPU及GPU要求较高，如果硬件配置不够的话容易出现画面撕裂等问题。
 
-<p>下面将介绍弹弹play + dmitriRender插帧的配置方法。</p>
+下面将介绍如何在您的电脑上配置此功能。
 
-<p> </p>
+在弹弹play中开启插帧是一件很容易的事情，我们已经做到了播放器内集成、无需配置的开启方法。不过还是需要您提前将系统必备的程序都安装好。
 
-<p><strong>1. 下载安装 dmitriRender</strong></p>
+**1. 安装 AMD 显卡最新驱动程序**
 
-<p>首先，在 dmitriRender 的官方网站下载：<a href="http://www.dmitrirender.ru/index/0-11" target="_blank" rel="noreferrer noopener">http://www.dmitrirender.ru/index/0-11</a> 最新版程序。</p>
+您可以在AMD官方网站 [https://www.amd.com/zh-hans/support](https://www.amd.com/zh-hans/support) 下载安装适合您显卡型号的最新版 AMD 显卡驱动程序。
 
-<p>有一些必需的运行库需要提前装好，如VC++ 2015、DirectX等。</p>
+最新版的AMD显卡驱动已经默认开启了插帧功能，不需要您像以前一样做其他设置了。
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/ad33bb26f543b51727f20113eb171e5a.jpeg" alt="ad33bb26f543b51727f20113eb171e5a.jpeg" />​</p>
+**2. 安装 Bluesky Frame Rate Converter （BFRC）**
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/a4b04520df1d0c0ced3ee7496256bf01.jpeg" alt="a4b04520df1d0c0ced3ee7496256bf01.jpeg" />​</p>
+BFRC软件是使播放器和显卡进行沟通的桥梁，安装BFRC之后，播放器可以通过调用它提供的插件让显卡进行插帧工作。
 
-<p> </p>
+从这个页面的最底部： [https://bluesky-soft.com/en/BlueskyFRC.html](https://bluesky-soft.com/en/BlueskyFRC.html) 下载并安装BFRC软件。备份链接：[https://www.aliyundrive.com/s/ByQPSTcziWw](https://www.aliyundrive.com/s/ByQPSTcziWw)
 
-<p><strong>2. 激活并注册 dmitriRender 文件</strong></p>
+下载安装后打开BFRC软件。
 
-<p>安装完成后需要先激活试用，在开始菜单中找到【dmitriRender】-【License Manager】，点击试用按钮完成激活。</p>
+首先需要勾选上界面上的“Enable AMD Fluid Mothion Video”开关，然后选择好正确的GPU。
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/421a8539ff1aa269eadb2fece678bc6a.jpeg" alt="421a8539ff1aa269eadb2fece678bc6a.jpeg" />​</p>
+如果出现**无法显示字幕**的问题，请把下方的“**Enable Zero-Copy Mode**”选项**取消**掉。
 
-<p> </p>
+![b1b7dba2db8d7a3ab9dd4aa060d484b0.png](https://txc.gtimg.com/data/104929/2022/0213/b1b7dba2db8d7a3ab9dd4aa060d484b0.png)
 
-<p>然后需要向系统中注册 dmitriRender 的程序文件，以使弹弹play能够找到它。</p>
+**3. 安装 K-Lite 解码器包**
 
-<p>在开始菜单中找到【dmitriRender】-【Register Filter】，右键点击它，选择【更多】-【打开文件位置】</p>
+K-Lite是一款流行的解码器包软件。
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/ec8c74c683dddde8363bdeec729ae50e.png" alt="ec8c74c683dddde8363bdeec729ae50e.png" />​</p>
+弹弹play EVR内核需要多个外部组件才能够正常播放视频，其中包括：
 
-<p>在弹出的窗口中，选中 Register Filter 快捷方式，再次右键点击，选择【以管理员身份运行】。出现注册成功的提示即完成安装。</p>
+- LAV分离器：用于解析视频文件格式
+- LAV视频解码器：用于解码和播放视频
+- LAV音频解码器：用于解码和播放音频
+- DirectVobSub 和 DirectVobSub (auto-loading version)：用于加载和渲染字幕
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/fed4c58c0ca69787fbf94b273c6894da.png" alt="fed4c58c0ca69787fbf94b273c6894da.png" />​</p>
+幸运的是，K-Lite将这些必备的组件打包到一起，只要安装一次即可将他们全部安装至系统中。
 
-<p> </p>
+从K-Lite官网：[https://codecguide.com/download_kl.htm](https://codecguide.com/download_kl.htm) 下载最新版本，按照默认设置安装即可。备用链接：[https://www.aliyundrive.com/s/XrZv4HzZYL8](https://www.aliyundrive.com/s/XrZv4HzZYL8)
 
-<p><strong>3. 安装 K-Lite 解码器包</strong></p>
+4. 在弹弹play中进行设置
 
-<p>弹弹play EVR内核需要多个外部组件才能够正常播放视频，其中包括：</p>
+在弹弹play右上角【设置】-【播放核心与字幕】页面中，选中“EVR”内核，再选中下方的“启用视频插帧”选项即可。
 
-<ul><li>LAV分离器：用于解析视频文件格式</li>
-	<li>LAV视频解码器：用于解码和播放视频</li>
-	<li>LAV音频解码器：用于解码和播放音频</li>
-	<li>DirectVobSub：用于加载和渲染字幕</li>
-</ul><p>幸运的是，K-Lite将这些必备的组件打包到一起，只要安装一次即可将他们全部安装至系统中。</p>
+![f7948e298b9213edbf1e3cbc6700270d.png](https://txc.gtimg.com/data/104929/2019/1218/f7948e298b9213edbf1e3cbc6700270d.png)
 
-<p>从K-Lite官网：<a href="https://codecguide.com/download_kl.htm" target="_blank" rel="noreferrer noopener">https://codecguide.com/download_kl.htm</a> 下载最新版本，按照默认设置安装即可。备用链接：<a href="https://pan.baidu.com/s/1Ctw_gm3Wf43JPYmA0qxi2Q" target="_blank" rel="noreferrer noopener">https://pan.baidu.com/s/1Ctw_gm3Wf43JPYmA0qxi2Q</a></p>
+**常见问题**
 
-<p> </p>
+1. 如何判断是AMD插帧是否已启用？
 
-<p><strong>4. 在弹弹play中开启 dmitriRender 支持</strong></p>
+插帧启用后，肉眼应该能明显感觉到视频变化。
 
-<p>在弹弹play右上角【设置】-【播放核心与字幕】页面中，选中“EVR内核”，然后再开启下方的“dmitriRender 插帧”选项，即可完成设置。</p>
+除此之外，在播放视频时打开 Bluesky Frame Rate Converter 应用，切换到最后一个“Status”选项卡，也可看到当前的插帧状态，如下图所示：
 
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/af40db828cf7e6f4d6d3b70a3815bd30.png" alt="af40db828cf7e6f4d6d3b70a3815bd30.png" />​</p>
+![afcbdb0268a5b5744ae54aa612e0769a.png](https://txc.gtimg.com/data/104929/2019/1218/afcbdb0268a5b5744ae54aa612e0769a.png)
 
-<p><strong>常见问题</strong></p>
-
-<p>1. 如何判断插帧是否已启用？</p>
-
-<p>在播放视频时，右下角会出现 dmitriRender 的图标，如果图标为绿色，则表示插帧已经启用。</p>
-
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/70316e27c0571267ea607f0fd3f83c9c.jpeg" alt="70316e27c0571267ea607f0fd3f83c9c.jpeg" />​</p>
-
-<p>如果出现红色，表示启用失败，或是当前显卡性能不足以启用 dmitriRender</p>
-
-<p><img src="https://txc.gtimg.com/data/104929/2019/1220/f80be39b80721ad3d701c73a820a1280.jpeg" alt="f80be39b80721ad3d701c73a820a1280.jpeg" />​</p>
+如果这里显示了相应的信息（不是空的），并且 LastError 一行显示为“None”（如果出错则会显示一个数字），表示当前插帧已正常开启。
