@@ -41,7 +41,7 @@ export default ({
             },
             {
                 text: '常见问题',
-                link: '/faq/',
+                link: '/faq/'
             },
             {
                 text: '常用功能',
@@ -50,6 +50,11 @@ export default ({
             {
                 text: '其他',
                 link: '/other/',
+                children: [
+                    '/other/feedback.md',
+                    '/other/privacy.md',
+                    '/other/donate.md',
+                ]
             },
         ]
     }),
