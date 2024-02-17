@@ -49,6 +49,10 @@ export default ({
             {
                 text: '常用功能',
                 link: '/function/',
+                children: [
+                    '/function/danmaku-overlay.md',
+                    '/function/kernel-compare.md'
+                ]
             },
             {
                 text: '其他',

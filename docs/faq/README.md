@@ -1,6 +1,5 @@
 # 常见问题
 
-- [『弹幕外挂』功能配置方法](『弹幕外挂』功能配置方法.html)
 - [弹弹play+AMDFluidMotion插帧教程](弹弹play+AMDFluidMotion插帧教程.html)
 - [弹弹play+dmitriRender插帧教程](弹弹play+dmitriRender插帧教程.html)
 - [弹弹play+SVP插帧教程](弹弹play+SVP插帧教程.html)
