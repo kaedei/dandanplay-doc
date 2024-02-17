@@ -5,6 +5,9 @@ export default ({
     title: '弹弹play',
     description: '这是弹弹play帮助文档',
     base: process.env.VUEPRESS_BASE || '/',
+    head: [
+        ['link', { rel: 'icon', href: '/images/logo.png' }]
+    ],
     theme: defaultTheme({
         logo: '/images/logo.png',
         repo: 'https://www.dandanplay.com/',
