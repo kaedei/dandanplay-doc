@@ -50,8 +50,15 @@ export default ({
                 text: '常用功能',
                 link: '/function/',
                 children: [
+                    '/function/member.md',
                     '/function/danmaku-overlay.md',
-                    '/function/kernel-compare.md'
+                    '/function/kernel-compare.md',
+                    '/function/video-frame-interpolation.md',
+                    '/function/cast-to-tv.md',
+                    '/function/backuped-danmaku.md',
+                    '/function/ai-speech-recognition.md',
+                    '/function/ai-translate.md',
+                    '/function/ai-video-summary.md'
                 ]
             },
             {

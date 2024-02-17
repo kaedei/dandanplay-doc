@@ -1,15 +1,5 @@
 # 常见问题
 
-- [弹弹play+AMDFluidMotion插帧教程](弹弹play+AMDFluidMotion插帧教程.html)
-- [弹弹play+dmitriRender插帧教程](弹弹play+dmitriRender插帧教程.html)
-- [弹弹play+SVP插帧教程](弹弹play+SVP插帧教程.html)
-- [弹弹play数据库](弹弹play数据库.html)
-- [关于弹弹play会员](关于弹弹play会员.html)
-- [如何为弹弹play启用插帧](如何为弹弹play启用插帧.html)
-- [使用『AI视频总结』功能为视频生成大纲和总结](使用『AI视频总结』功能为视频生成大纲和总结.html)
-- [使用备用弹幕功能优化弹幕加载体验](使用备用弹幕功能优化弹幕加载体验.html)
-- [使用弹弹play在线服务翻译字幕文件](使用弹弹play在线服务翻译字幕文件.html)
-- [使用AI语音识别为视频生成字幕](使用AI语音识别为视频生成字幕.html)
+- [关于弹弹play会员](../function/member.html)
 - [下载相关问题](下载相关问题.html)
-- [向电视投屏播放视频和弹幕](向电视投屏播放视频和弹幕.html)
 - [资源搜索功能相关问题](资源搜索功能相关问题.html)
