@@ -6,7 +6,8 @@ export default ({
     description: '这是弹弹play帮助文档',
     base: process.env.VUEPRESS_BASE || '/',
     head: [
-        ['link', { rel: 'icon', href: '/images/logo.png' }]
+        ['link', { rel: 'icon', href: '/images/logo.png' }],
+        ['link', { rel:'stylesheet', href: '/css/style.css'}]
     ],
     theme: defaultTheme({
         logo: '/images/logo.png',
