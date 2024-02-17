@@ -10,7 +10,9 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-
+    env:
+      # VuePress base 配置
+      VUEPRESS_BASE: /dandanplay-doc/
     steps:
       - uses: actions/checkout@v3
         with:
@@ -48,5 +50,4 @@ jobs:
           build_dir: docs/.vuepress/dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          VUEPRESS_BASE: /dandanplay-doc/
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

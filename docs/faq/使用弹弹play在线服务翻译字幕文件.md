@@ -4,7 +4,7 @@
 
 从PC 13.3版开始，弹弹play支持使用在线服务为您翻译AI语音识别出的文本，也可以用来翻译字幕文件。
 
-「AI语音识别」功能介绍： [https://support.qq.com/products/104929/faqs/138503](https://support.qq.com/products/104929/faqs/138503)
+[「AI语音识别」功能介绍](使用AI语音识别为视频生成字幕.html)
 
 ## 功能特点
 
