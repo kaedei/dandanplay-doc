@@ -1,7 +1,8 @@
 # 问题反馈
 
-目前问题反馈区还在重建中。
+- 反馈与问答社区：[https://support.qq.com/products/104929](https://support.qq.com/products/104929)
+使用QQ账号或微信账号登录，即可在社区中提问，我们会尽快回复。
 
-您可以暂时先在 GitHub 上提交 issue：[https://github.com/kaedei/dandanplay-libraryindex/issues](https://github.com/kaedei/dandanplay-libraryindex/issues)
+- 官方QQ群：493974192
 
-或是加入我们的 QQ 群：493974192 反馈问题。
+- 邮箱：kaedei@dandanplay.net

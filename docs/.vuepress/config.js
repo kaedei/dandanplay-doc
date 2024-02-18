@@ -39,6 +39,7 @@ export default ({
                 link: '/guide/',
                 children: [
                     '/guide/',
+                    '/guide/clients.md',
                     '/guide/pc.md',
                     '/guide/android.md',
                 ]
