@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-546873c4","path":"/faq/account.html","title":"账号、注册、登录相关问题","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1708272050000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":1}]},"filePathRelative":"faq/account.md"}');export{t as data};
