@@ -60,7 +60,8 @@ export default ({
                     '/function/backuped-danmaku.md',
                     '/function/ai-speech-recognition.md',
                     '/function/ai-translate.md',
-                    '/function/ai-video-summary.md'
+                    '/function/ai-video-summary.md',
+                    '/function/media-sniff.md'
                 ]
             },
             {
