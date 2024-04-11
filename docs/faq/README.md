@@ -7,3 +7,4 @@
 - [播放器无法启动如何解决](pc-cannot-start.md)
 - [弹弹play是如何加载弹幕的？](load-danmaku.md)
 - [备份弹弹play的数据（PC版）](pc-backup.md)
+- [弹弹play PC版性能问题汇总](pc-performance.md)

@@ -45,10 +45,6 @@ export default ({
                 ]
             },
             {
-                text: '常见问题',
-                link: '/faq/'
-            },
-            {
                 text: '常用功能',
                 link: '/function/',
                 children: [
@@ -62,6 +58,20 @@ export default ({
                     '/function/ai-translate.md',
                     '/function/ai-video-summary.md',
                     '/function/media-sniff.md'
+                ]
+            },
+            {
+                text: '常见问题',
+                link: '/faq/',
+                children: [
+                    '/faq/download.md',
+                    '/faq/resource-service.md',
+                    '/faq/pc-beta.md',
+                    '/faq/account.md',
+                    '/faq/pc-cannot-start.md',
+                    '/faq/load-danmaku.md',
+                    '/faq/pc-backup.md',
+                    '/faq/pc-performance.md',
                 ]
             },
             {
