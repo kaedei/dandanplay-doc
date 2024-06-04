@@ -11,3 +11,5 @@
 - [使用“备用弹幕”功能优化弹幕加载体验](backuped-danmaku.html)
 - [在弹弹play中启用插帧](video-frame-interpolation.html)
 - [使用『媒体嗅探』，从网页中提取视频并附加弹幕](media-sniff.html)
+- [媒体库功能介绍](media-library.html)
+- [连接到远程Emby/Jellyfin媒体服务器](medialibrary-remote-emby.html)
