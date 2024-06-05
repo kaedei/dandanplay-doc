@@ -77,6 +77,10 @@ export default ({
                 ]
             },
             {
+                text: '更新日志',
+                link: '/changelog/'
+            },
+            {
                 text: '其他',
                 link: '/other/',
                 children: [
