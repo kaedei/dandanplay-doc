@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-13d94704","path":"/function/","title":"常用功能","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1719064061000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":5}]},"filePathRelative":"function/README.md"}');export{e as data};
