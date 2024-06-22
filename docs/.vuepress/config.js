@@ -59,7 +59,8 @@ export default ({
                     '/function/ai-video-summary.md',
                     '/function/media-sniff.md',
                     '/function/media-library.md',
-                    '/function/medialibrary-remote-emby.md'
+                    '/function/medialibrary-remote-emby.md',
+                    '/function/medialibrary-remote-dandanplay.md'
                 ]
             },
             {

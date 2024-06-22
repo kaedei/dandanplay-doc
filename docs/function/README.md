@@ -13,3 +13,4 @@
 - [使用『媒体嗅探』，从网页中提取视频并附加弹幕](media-sniff.html)
 - [媒体库功能介绍](media-library.html)
 - [连接到远程Emby/Jellyfin媒体服务器](medialibrary-remote-emby.html)
+- [连接到远程电脑上的弹弹play（PC版）](medialibrary-remote-dandanplay.html)
