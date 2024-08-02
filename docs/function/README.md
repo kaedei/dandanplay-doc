@@ -14,3 +14,4 @@
 - [媒体库功能介绍](media-library.html)
 - [连接到远程Emby/Jellyfin媒体服务器](medialibrary-remote-emby.html)
 - [连接到远程电脑上的弹弹play（PC版）](medialibrary-remote-dandanplay.html)
+- [下载器黑名单](download-banlist.html)

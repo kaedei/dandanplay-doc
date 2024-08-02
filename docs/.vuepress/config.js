@@ -57,6 +57,7 @@ export default ({
                     '/function/ai-speech-recognition.md',
                     '/function/ai-translate.md',
                     '/function/ai-video-summary.md',
+                    '/function/download-banlist.md',
                     '/function/media-sniff.md',
                     '/function/media-library.md',
                     '/function/medialibrary-remote-emby.md',
