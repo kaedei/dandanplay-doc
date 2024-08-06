@@ -61,7 +61,8 @@ export default ({
                     '/function/media-sniff.md',
                     '/function/media-library.md',
                     '/function/medialibrary-remote-emby.md',
-                    '/function/medialibrary-remote-dandanplay.md'
+                    '/function/medialibrary-remote-dandanplay.md',
+                    '/function/medialibrary-remote-onedrive.md',
                 ]
             },
             {

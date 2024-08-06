@@ -27,10 +27,12 @@
   - [使用弹弹play在线服务翻译字幕文件](function/ai-translate.html)
   - [使用“备用弹幕”功能优化弹幕加载体验](function/backuped-danmaku.html)
   - [在弹弹play中启用插帧](function/video-frame-interpolation.html)
+  - [下载器黑名单](function/download-banlist.html)
   - [使用『媒体嗅探』，从网页中提取视频并附加弹幕](function/media-sniff.html)
   - [媒体库功能介绍](function/media-library.html)
   - [连接到远程Emby/Jellyfin媒体服务器](function/medialibrary-remote-emby.html)
   - [连接到远程电脑上的弹弹play（PC版）](function/medialibrary-remote-dandanplay.html)
+  - [连接到OneDrive个人版网盘](function/medialibrary-remote-onedrive.html)
 
 - [更新日志](changelog/README.md)
 
