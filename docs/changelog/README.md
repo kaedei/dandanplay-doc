@@ -2,6 +2,7 @@
 
 ## PC版（Windows、UWP）更新日志
 
+- [15.9](windows-15.9.md)
 - [15.8](windows-15.8.md)
 - [15.7](windows-15.7.md)
 - [15.6](windows-15.6.md)
