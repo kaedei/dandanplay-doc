@@ -80,6 +80,10 @@ export default ({
                 ]
             },
             {
+                text: '开放平台',
+                link: '/open/',
+            },
+            {
                 text: '更新日志',
                 link: '/changelog/'
             },

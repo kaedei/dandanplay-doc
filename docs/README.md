@@ -34,6 +34,8 @@
   - [连接到远程电脑上的弹弹play（PC版）](function/medialibrary-remote-dandanplay.html)
   - [连接到OneDrive个人版网盘](function/medialibrary-remote-onedrive.html)
 
+- [弹弹play开放平台](open/README.md)
+
 - [更新日志](changelog/README.md)
 
 - [其他](other/README.md)
