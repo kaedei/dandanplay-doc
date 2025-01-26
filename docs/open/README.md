@@ -4,7 +4,7 @@
 
 开放平台文档及在线调试工具：[https://api.dandanplay.net/swagger](https://api.dandanplay.net/swagger)
 
-弹弹play服务状态页：[https://stats.uptimerobot.com/DV0BKUo2g9](https://stats.uptimerobot.com/DV0BKUo2g9)
+[API变动日志](changelog.md) | [弹弹play服务状态页](https://stats.uptimerobot.com/DV0BKUo2g9)
 
 [[TOC]]
 
@@ -242,6 +242,7 @@ function generateSignature(appId, timestamp, path, appSecret) {
 
 ### 11. 客户端调用流程
 
+#### (1) 使用文件识别或搜索，得到节目编号
 首先，在打开视频文件的时候，客户端应该调用 **文件识别 API**（`/api/v2/match`），传递视频文件名、hash、长度、大小之后，服务器端对文件进行识别。文件识别 API 会返回一个“此文件可能是...”的列表，用户需要在此列表中选择一个最适合的项目。
 
 - Hash计算方式：使用文件前 16MB（16x1024x1024字节）数据计算MD5
@@ -251,13 +252,17 @@ function generateSignature(appId, timestamp, path, appSecret) {
 
 当**文件识别 API**（`/api/v2/match`）返回的列表中没有正确的番剧名称或节目时，仍可通过 **搜索 API**（`/api/v2/search`）搜索番剧名称，进行手动匹配。
 
-之后，客户端就可以通过`节目编号(episodeId)`来调用 **弹幕 API**（`/api/v2/comment`）获取弹弹play服务器上的弹幕了。
+#### (2) 使用节目编号获取弹幕
 
-弹弹play服务器上的弹幕数量不够怎么办？这时可以调用 **弹幕关联 API**（`/api/v2/related`），客户端可以通过`节目编号(episodeId)`获得这个节目在其他网站上都有哪些对应的网址（如B站、动画疯等），从而解析这些网址并加载弹幕。
+之后，客户端就可以通过`节目编号(episodeId)`来调用 **弹幕 API**（`/api/v2/comment`）获取弹弹play服务器上的弹幕了。使用参数 `?withRelated=true` 可以获取整合第三方网站后的所有弹幕。
 
-为了从解析出一个外部网址对应的弹幕，除了自行编写解析代码，也可以使用 **外部弹幕 API**（`/api/v2/extcomment`）获取已缓存的弹幕。
+> 弹弹play服务器上的弹幕数量不够怎么办？这时可以调用 **弹幕关联 API**（`/api/v2/related`），客户端可以通过`节目编号(episodeId)`获得这个节目在其他网站上都有哪些对应的网址（如B站、动画疯等），从而解析这些网址并加载弹幕。
 
-最后，当用户想要发送弹幕时，可以再次调用 **弹幕 API**（`/api/v2/comment`）将弹幕发送到弹弹play服务器上。
+> 为了从解析出一个外部网址对应的弹幕，除了自行编写解析代码，也可以使用 **外部弹幕 API**（`/api/v2/extcomment`）获取已缓存的弹幕。
+
+#### (3) 发送弹幕
+
+当用户想要发送弹幕时，可以再次调用 **弹幕 API**（`/api/v2/comment`）将弹幕发送到弹弹play服务器上。
 
 ### 12. 支持
 

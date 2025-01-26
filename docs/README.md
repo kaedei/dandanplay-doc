@@ -35,8 +35,9 @@
   - [连接到OneDrive个人版网盘](function/medialibrary-remote-onedrive.html)
 
 - [弹弹play开放平台](open/README.md)
+  - [API 变动日志](open/changelog.md)
 
-- [更新日志](changelog/README.md)
+- [客户端更新日志](changelog/README.md)
 
 - [其他](other/README.md)
   - [问题反馈](other/feedback.md)

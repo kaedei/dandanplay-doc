@@ -1,4 +1,4 @@
-# 弹弹play更新日志
+# 弹弹play客户端更新日志
 
 ## PC版（Windows、UWP）更新日志
 

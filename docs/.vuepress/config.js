@@ -82,9 +82,13 @@ export default ({
             {
                 text: '开放平台',
                 link: '/open/',
+                children: [
+                    '/open/README.md',
+                    '/open/changelog.md'
+                ]
             },
             {
-                text: '更新日志',
+                text: '客户端更新日志',
                 link: '/changelog/'
             },
             {
