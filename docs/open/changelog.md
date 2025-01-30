@@ -2,6 +2,12 @@
 
 [[TOC]]
 
+## 2025年1月30日
+
+### 平台认证机制
+
+开放平台已按原计划启用了应用强制认证机制，详见[开放平台文档](README.md)。开发者若要接入弹弹play开放平台，请先申请AppId和AppSecret，并及时更新您的应用。
+
 ## 2025年1月27日
 
 ### 性能优化
@@ -14,7 +20,7 @@
 
 | 接口路径 | 参数 | 变动描述 |
 |---|---|---|
-| `/api/v2/search/episodes` | `tmdbId` | 增加了 `tmdbId` 参数，用于通过 TMDB ID 反查弹弹play的弹幕库。TMDB 存在 season（季）的设定而弹弹play没有，因此可能会查到多个结果。 |
+| `/api/v2/search/episodes` | `tmdbId` | 增加了 `tmdbId` 参数，用于通过 TMDB ID 反查弹弹play的弹幕库。TMDB 存在 season（季）的设定而弹弹play没有，因此一个 TMDB ID 可能会查询到多个结果。 |
 | | `anime` | 改为可选参数。查询时，`anime` 和 `tmdbId` 至少需要提供一个。|
 
 #### 示例用法

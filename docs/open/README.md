@@ -2,9 +2,9 @@
 
 请开发者加QQ群第一时间获取弹弹play API（服务器状态、API改动）的通知：[https://qm.qq.com/q/D2nRsB3mCY](https://qm.qq.com/q/D2nRsB3mCY)
 
-开放平台文档及在线调试工具：[https://api.dandanplay.net/swagger](https://api.dandanplay.net/swagger)
-
-[API变动日志](changelog.md) | [弹弹play服务状态页](https://stats.uptimerobot.com/DV0BKUo2g9)
+[接口文档及在线调试工具](https://api.dandanplay.net/swagger) |
+[弹弹play服务状态页](https://stats.uptimerobot.com/DV0BKUo2g9) |
+[API变动日志](changelog.md) |
 
 [[TOC]]
 
@@ -64,17 +64,9 @@
 
 我们推荐使用 **签名验证模式**，因为这种方式更加安全，可以保护您的 `AppSecret`。
 
-如果您的应用程序是一个客户端应用（如移动应用、桌面应用、纯前端应用等），我们强烈建议您使用 **签名验证模式**。
+- 如果您的应用程序是一个客户端应用（如移动应用、桌面应用、纯前端应用等），我们强烈建议您使用 **签名验证模式**。
 
-如果您的应用程序是一个服务器端应用，或者您有能力保护 `AppSecret`，那么可以使用 **客户端凭证模式**。
-
-#### 测试签名（强制启用验证）
-
-请注意，当前弹弹play开放平台尚未开启对请求头的强制验证（除`/api/v2/search/episode`接口外）。服务器端预计将于**2025年1月30日后、2025年2月5日前**开启强制验证。在此之前，您可以不用在请求头中包含 `X-` 系列参数来访问 API。但是我们仍然建议您在测试时按照正式环境的要求进行代码编写，以确保届时您的应用能够正常工作。
-
-开放平台提供了“**测试模式**”供您提前测试签名是否正确，您可以在 HTTP 头中添加 `X-Auth: 1` 来强制启用签名验证。在测试模式启用时，您的请求头中必须按照上述要求包含正确的 `X-AppId`、`X-Timestamp` 、 `X-Signature` 或 `X-AppSecret`，否则将返回包含 `X-Error-Message` 的 403 错误响应。
-
-为了限制过多的访问浪费服务器资源，当前`/api/v2/search/episode`接口已经提前开启强制启用验证，如果您需要调用此接口，请按照上述要求配置请求头。此改动给您带来的不便敬请谅解。
+- 如果您的应用程序是一个服务器端应用，或者您有能力保护 `AppSecret`，那么可以使用 **客户端凭证模式**。
 
 ### 5. 签名验证模式指南
 
@@ -178,7 +170,7 @@ function generateSignature(appId, timestamp, path, appSecret) {
     ```
 
 - **401 Unauthorized**:
-  - 调用私有接口时缺少必要的身份验证头。
+  - 调用受限接口（下文介绍）时缺少必要的身份验证头。
 
 - **403 Forbidden**: 
   - 缺少必要的身份验证头。
@@ -213,7 +205,7 @@ function generateSignature(appId, timestamp, path, appSecret) {
 
 目前弹弹play API中的接口分为两类，**公开接口** 和 **受限接口**：
   - **公开接口**是指不需要身份验证就可以访问的接口，如文件识别、搜索、获取弹幕等。
-  - **受限接口**是指需要身份验证（用户处于登录状态）才能访问的接口，如关注、播放历史、发送弹幕等。
+  - **受限接口**是指需要身份验证（用户成功登录后）才能访问的接口，如关注、播放历史、发送弹幕等。
 
 受限接口一般和用户操作自己的数据有关，在Swagger工具的接口注释中会注明。调用受限接口时需要在 Authorization 头中包含用户的 JWT Token。
 
@@ -241,6 +233,8 @@ function generateSignature(appId, timestamp, path, appSecret) {
 如果您的应用调用量非常大或非常频繁，建议从一开始接入时就考虑使用缓存机制，以免触发开放平台的检测与拦截机制。
 
 ### 11. 客户端调用流程
+
+[接口文档及在线调试工具](https://api.dandanplay.net/swagger)
 
 #### (1) 使用文件识别或搜索，得到节目编号
 首先，在打开视频文件的时候，客户端应该调用 **文件识别 API**（`/api/v2/match`），传递视频文件名、hash、长度、大小之后，服务器端对文件进行识别。文件识别 API 会返回一个“此文件可能是...”的列表，用户需要在此列表中选择一个最适合的项目。
