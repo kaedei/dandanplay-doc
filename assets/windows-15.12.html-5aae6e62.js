@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-a85af228","path":"/changelog/windows-15.12.html","title":"弹弹play 15.12 版本更新","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1738080265000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":1}]},"filePathRelative":"changelog/windows-15.12.md"}');export{e as data};

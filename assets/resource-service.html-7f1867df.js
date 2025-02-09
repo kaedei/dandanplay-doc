@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-a865a8de","path":"/faq/resource-service.html","title":"资源搜索功能相关问题","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1708159898000,"contributors":[{"name":"kaedei","email":"kaedei@qq.com","commits":1}]},"filePathRelative":"faq/resource-service.md"}');export{e as data};
