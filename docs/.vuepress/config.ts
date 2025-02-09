@@ -1,6 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
     bundler: viteBundler(),
@@ -11,6 +12,16 @@ export default defineUserConfig({
     head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }],
         ['link', { rel:'stylesheet', href: '/css/style.css'}]
+    ],
+    plugins: [
+        searchPlugin({
+            locales: {
+                '/': {
+                    placeholder: '搜索 Ⓢ'
+                },
+            },
+            maxSuggestions: 10,
+        }),
     ],
     theme: defaultTheme({
         logo: '/images/logo.png',

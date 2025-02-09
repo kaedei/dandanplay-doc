@@ -13,6 +13,7 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.19",
     "@vuepress/client": "^2.0.0-rc.19",
+    "@vuepress/plugin-search": "^2.0.0-rc.74",
     "@vuepress/theme-default": "^2.0.0-rc.74",
     "sass": "^1.84.0",
     "vue": "^3.3.4",
