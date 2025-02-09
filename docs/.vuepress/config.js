@@ -84,7 +84,10 @@ export default ({
                 link: '/open/',
                 children: [
                     '/open/README.md',
-                    '/open/changelog.md'
+                    '/open/changelog.md',
+                    '/open/client-protocol.md',
+                    '/open/library-api.md',
+                    '/open/resource-service-api.md'
                 ]
             },
             {
