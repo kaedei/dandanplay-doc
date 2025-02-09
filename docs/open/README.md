@@ -63,13 +63,15 @@
   - **X-AppId**: 您的应用程序 ID。
   - **X-AppSecret**: 您的应用程序密钥（之一）。
 
-#### 选择正确的身份验证模式
+:::tip 选择正确的身份验证模式
 
 我们推荐使用 **签名验证模式**，因为这种方式更加安全，可以保护您的 `AppSecret`。
 
 - 如果您的应用程序是一个客户端应用（如移动应用、桌面应用、纯前端应用等），我们强烈建议您使用 **签名验证模式**。
 
 - 如果您的应用程序是一个服务器端应用，或者您有能力保护 `AppSecret`，那么可以使用 **客户端凭证模式**。
+
+:::
 
 ### 5. 签名验证模式指南
 
@@ -100,7 +102,11 @@
 
 #### 示例代码
 
-以下是一个使用 Java 的示例代码，展示如何生成签名：
+以下是多种语言的示例代码，展示如何生成签名并输出计算后的结果。
+
+::: code-tabs#signature
+
+@tab Java
 
 ```java
 import java.security.MessageDigest;
@@ -136,7 +142,7 @@ public class SignatureGenerator {
 }
 ```
 
-以下是一个使用 JavaScript 的示例代码，展示如何生成签名：
+@tab JavaScript
 
 ```javascript
 const crypto = require('crypto');
@@ -158,6 +164,119 @@ function generateSignature(appId, timestamp, path, appSecret) {
         digest('base64');
 }
 ```
+
+@tab PHP
+
+```php
+<?php
+
+function generateSignature($appId, $timestamp, $path, $appSecret) {
+    $data = $appId . $timestamp . $path . $appSecret;
+    $hash = hash('sha256', $data, true);
+    return base64_encode($hash);
+}
+
+$appId = 'your_app_id';
+$appSecret = 'your_app_secret';
+$path = '/api/v2/comment/123450001';
+$timestamp = time();
+$signature = generateSignature($appId, $timestamp, $path, $appSecret);
+
+echo "X-AppId: $appId\n";
+echo "X-Signature: $signature\n";
+echo "X-Timestamp: $timestamp\n";
+```
+
+@tab .NET
+
+```csharp
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
+class SignatureGenerator
+{
+    static void Main()
+    {
+        string appId = "your_app_id";
+        string appSecret = "your_app_secret";
+        string path = "/api/v2/comment/123450001";
+        long timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+        string signature = GenerateSignature(appId, timestamp, path, appSecret);
+
+        Console.WriteLine("X-AppId: " + appId);
+        Console.WriteLine("X-Signature: " + signature);
+        Console.WriteLine("X-Timestamp: " + timestamp);
+    }
+
+    private static string GenerateSignature(string appId, long timestamp, string path, string appSecret)
+    {
+        string data = appId + timestamp + path + appSecret;
+        using (SHA256 sha256 = SHA256.Create())
+        {
+            byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(data));
+            return Convert.ToBase64String(hash);
+        }
+    }
+}
+```
+
+@tab Python
+
+```python
+import hashlib
+import base64
+import time
+
+def generate_signature(app_id, timestamp, path, app_secret):
+    data = f"{app_id}{timestamp}{path}{app_secret}"
+    sha256_hash = hashlib.sha256(data.encode()).digest()
+    return base64.b64encode(sha256_hash).decode()
+
+app_id = 'your_app_id'
+app_secret = 'your_app_secret'
+path = '/api/v2/comment/123450001'
+timestamp = int(time.time())
+signature = generate_signature(app_id, timestamp, path, app_secret)
+
+print(f"X-AppId: {app_id}")
+print(f"X-Signature: {signature}")
+print(f"X-Timestamp: {timestamp}")
+```
+
+@tab Go
+
+```go
+package main
+
+import (
+	"crypto/sha256"
+	"encoding/base64"
+	"fmt"
+	"time"
+)
+
+func generateSignature(appId string, timestamp int64, path string, appSecret string) string {
+	data := fmt.Sprintf("%s%d%s%s", appId, timestamp, path, appSecret)
+	hash := sha256.Sum256([]byte(data))
+	return base64.StdEncoding.EncodeToString(hash[:])
+}
+
+func main() {
+	appId := "your_app_id"
+	appSecret := "your_app_secret"
+	path := "/api/v2/comment/123450001"
+	timestamp := time.Now().Unix()
+	signature := generateSignature(appId, timestamp, path, appSecret)
+
+	fmt.Printf("X-AppId: %s\n", appId)
+	fmt.Printf("X-Signature: %s\n", signature)
+	fmt.Printf("X-Timestamp: %d\n", timestamp)
+}
+```
+
+:::
 
 ### 6. 错误处理
 
@@ -225,9 +344,13 @@ function generateSignature(appId, timestamp, path, appSecret) {
 - 不可将 API 用于违法、违规，或侵犯他人权益的行为。
 - 未经授权，禁止利用弹弹play开放平台返回的数据进行任何形式的商业活动，包括但不限于向第三方收费或提供增值服务。如需商业合作或授权，请与我们联系。
 
-当前开放平台暂不对 API 的调用次数和频率进行限制，但如果我们发现您的应用程序有违反上述约定的行为，我们保留在不事先通知的情况下立即停用您应用的权利。
+:::warning
+
+当前开放平台不限制 API 的调用次数和频率，但如果我们发现您的应用程序有违反上述约定的行为，我们保留在不事先通知的情况下立即停用您应用的权利。
 
 为了保证开放平台的正常服务，我们对部分比较消耗服务器资源的接口（如搜索）配置了检测机制，如果检测到您的应用程序超过正常使用范围内的调用这些接口，程序将自动限制您的继续访问。如果您的应用确实需要频繁调用这些接口，请联系我们添加白名单。
+
+:::
 
 ### 10. 缓存建议
 
