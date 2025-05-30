@@ -79,6 +79,7 @@ export default defineUserConfig({
                     '/function/medialibrary-remote-emby.md',
                     '/function/medialibrary-remote-dandanplay.md',
                     '/function/medialibrary-remote-onedrive.md',
+                    '/function/medialibrary-remote-plex.md',
                 ]
             },
             {

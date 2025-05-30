@@ -17,7 +17,7 @@
 
 #### 弹弹play会员包含了什么内容呢？
 
-答：截至PC版 15.8 版本，弹弹play会员将能够：
+答：截至PC版 16.0 版本，弹弹play会员将能够：
 
 - 使用 **『弹幕外挂』** 功能，让您在使用熟悉的播放器播放视频时（如 PotPlayer、mpv、MPC-HC、MPC-BE 等），在其画面上方覆盖来自弹弹play的弹幕渲染层，并根据播放进度实时播放弹幕。[『弹幕外挂』功能介绍](../function/danmaku-overlay.html)
 
@@ -40,6 +40,8 @@
 - 连接到远程 **Emby/Jellyfin 媒体服务器**，浏览服务器上的媒体资源，无需下载到本地即可播放视频，并自动加载弹幕和字幕。[连接到远程Emby/Jellyfin媒体服务器](../function/medialibrary-remote-emby.html)
 
 - 连接到 **OneDrive 个人版网盘**，浏览网盘上的文件夹和媒体资源，无需下载到本地即可播放视频，并自动加载弹幕和字幕。[连接到 OneDrive 个人版网盘](../function/medialibrary-remote-onedrive.html)
+
+- 连接到远程 **Plex 媒体服务器**，浏览服务器上的媒体资源，无需下载到本地即可播放视频，并自动加载弹幕和字幕。[连接到远程Plex媒体服务器](../function/medialibrary-remote-plex.md)
 
 之后的版本，我们还会持续地为会员用户提供更多实用的新功能。
 
