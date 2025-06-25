@@ -1,0 +1,8 @@
+{
+    "pasteImage.basePath": "${projectRoot}/docs/.vuepress/public",
+    "pasteImage.path": "${projectRoot}/docs/.vuepress/public/images/upload",
+    "pasteImage.namePrefix": "${currentFileNameWithoutExt}-",
+    "pasteImage.nameSuffix": "",
+    "pasteImage.prefix": "/",
+    "pasteImage.defaultName": "YMMDD-HHmmss"
+}

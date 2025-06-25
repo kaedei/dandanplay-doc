@@ -28,7 +28,7 @@
 
 资源搜索节点是弹弹play客户端与资源站（如花园）之间的一个转发层，因为大多数资源站是没有公开API（API：应用程序接口）可使用的，所以我们架设了一个节点，将资源站传输的网页重新格式化成标准json格式的数据，方便展示在各个平台的客户端中。流程如图：
 
-![640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/mmbiz_png/8FH2fYzPNVh7T7kLEzyT65Fnicesyic5HFYV6ibnS9ZltHFiawK0ZRTlicUD9H1JyVSg5iaV4ZDvqzn8trnyvWKiacRfg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/images/upload/resource-service-20250625-123927.png)
 
 节点下线之后，播放器因为失去了中间的转发层，又不能直接连接到资源站（数据格式不同），将无法再继续使用资源搜索功能。
 
@@ -42,7 +42,7 @@ B) 或是自行搭建节点服务器：自己写代码实现节点API，文档�
 
 定位到【弹弹play->设置->网络与更新-自定义端点】处，将节点地址填写到第二个文本框中，注意格式
 
-![a5ce2a93685605bbd649d545a92285d9.png](https://txc.gtimg.com/data/104929/2021/0420/a5ce2a93685605bbd649d545a92285d9.png)
+![](/images/upload/resource-service-20250625-123938.png)
 
 （不是填图上的地址，请按实际情况填写节点服务器地址）
 

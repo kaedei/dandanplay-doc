@@ -6,4 +6,4 @@
 
 测试版将提前一段时间提供新功能与修复，但也有可能出现不稳定或数据意外丢失的情况，请慎重选择。
 
-![dandanplay-beta.png](https://txc.gtimg.com/data/104929/2021/1223/f0112e872e55807f8a9b2c1c534f983d.png)
+![](/images/upload/pc-beta-20250625-123822.png)

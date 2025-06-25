@@ -8,11 +8,11 @@
 
 ### 一、首先请在电视上安装弹弹play安卓概念版，通常的安装方式如下：
 
-1. 浏览器访问弹弹play官网 www.dandanplay.com，点击安卓概念版链接，跳转到产品下载页进行下载
+1. 浏览器访问弹弹play官网 www.dandanplay.com，点击下载链接或安卓概念版的发布页，跳转到下载页进行下载
 
-   ![20c7bdfd607e8376f6f7d5745f029e83.png](https://txc.gtimg.com/data/104929/2023/0320/20c7bdfd607e8376f6f7d5745f029e83.png)
+![](/images/upload/cast-to-tv-20250625-124029.png)
 
-   ![ec69d9bc700605abeb363b71711ebe27.png](https://txc.gtimg.com/data/104929/2023/0320/ec69d9bc700605abeb363b71711ebe27.png)
+![](/images/upload/cast-to-tv-20250625-124139.png)
 
 2. 要在电视上安装，可以先在电脑上将弹弹play安卓概念版apk下载到一个U盘中，然后把U盘插到电视上。最后通过电视上的“文件管理器”应用找到U盘中的apk文件，打开并安装。
 
@@ -24,11 +24,11 @@
 
 在电视上打开“弹弹play安卓概念版”，点击下方“我的”-“投屏接收端”
 
-![2e7e439ebf162d299a73f76ef69e2172.jpeg](https://txc.gtimg.com/data/104929/2023/0320/2e7e439ebf162d299a73f76ef69e2172.jpeg)
+![](/images/upload/cast-to-tv-20250625-124155.png)
 
 之后启动投屏接收服务即可。建议取消下方的”接收时弹窗确认“，并启用”自动启用接受服务“。
 
-![75e63ccd1c6483df15fc9eb01f1f3512.jpeg](https://txc.gtimg.com/data/104929/2023/0320/75e63ccd1c6483df15fc9eb01f1f3512.jpeg)
+![](/images/upload/cast-to-tv-20250625-124201.png)
 
 ### 三、使用手机端投屏播放（略）
 
@@ -40,8 +40,8 @@
 
 在视频播放过程中右键打开菜单，选择“投屏”；或是在媒体库中右键点击视频选择“投屏播放”，都可以启动投屏：
 
-![b6487617b1564b4327dbc7430a2a748b.png](https://txc.gtimg.com/data/104929/2023/0320/b6487617b1564b4327dbc7430a2a748b.png)
+![](/images/upload/cast-to-tv-20250625-124209.png)
 
 在「投屏」窗口中，切换到”安卓概念版投屏“页，输入电视上正在显示的IP地址、端口号以及连接密码（可选），点击”开始投屏“按钮即可。在投屏播放的过程中，可以关闭这个窗口，但不能退出弹弹play播放器。
 
-![4ca8f59daea7d48ff05f8dcac6878762.png](https://txc.gtimg.com/data/104929/2023/0320/4ca8f59daea7d48ff05f8dcac6878762.png)
+![](/images/upload/cast-to-tv-20250625-124252.png)

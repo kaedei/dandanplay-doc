@@ -4,7 +4,7 @@
 
 从PC v14.4版开始，弹弹play增加了『AI视频总结』功能，可以为本地视频生成详细的视频总结，并整理出大纲和时间点。效果如下：
 
-![98f58007091686ae655c3d4c9bba6da3.png](https://txc.gtimg.com/data/104929/2023/1128/98f58007091686ae655c3d4c9bba6da3.png)
+![](/images/upload/ai-video-summary-20250625-123321.png)
 
 ## 功能特点
 

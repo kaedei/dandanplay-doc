@@ -10,7 +10,7 @@
 
 使用 PotPlayer 播放时的效果如下：
 
-![d78c77c19f708c4922f41e235fb7ebcf.png](https://txc.gtimg.com/data/104929/2023/0702/d78c77c19f708c4922f41e235fb7ebcf.png)
+![](/images/upload/danmaku-overlay-20250625-122731.png)
 
 本文将讲解如何正确配置使用此功能。
 
@@ -22,11 +22,11 @@
 
    打开 PotPlayer，进入选项设置窗口（默认F5）。在【辅助】页面中选中【将程序的消息输出到系统标题栏用于朗读输出】选项后点【确定】保存。(见下图）
 
-   ![d8048b76eb63ede744ecf80bfe9156bf.png](https://txc.gtimg.com/data/104929/2023/0701/d8048b76eb63ede744ecf80bfe9156bf.png)
+   ![](/images/upload/danmaku-overlay-20250625-122750.png)
 
 3. 在弹弹play 【设置-播放器内核与字幕】 页面中选中【弹幕外挂 - PotPlayer】。请按您实际安装的 PotPlayer 版本选择使用32位或64位。
 
-   ![39ddb66ccfb8c0f83640ee85a6ac2c8c.png](https://txc.gtimg.com/data/104929/2023/1014/39ddb66ccfb8c0f83640ee85a6ac2c8c.png)
+   ![](/images/upload/danmaku-overlay-20250625-122800.png)
 
 4. 如果您没有将 PotPlayer 安装在默认位置，请点击【浏览 PotPlayer 可执行文件】按钮进行选择
 
@@ -48,19 +48,21 @@
 
    使用记事本编辑 mpv.config 配置文件。在 mpv_lazy 中，可以在【右键-工具-打开设置目录】定位到此文件
 
-   ![f307eb38bb610ee27ce42516f84bc0d8.png](https://txc.gtimg.com/data/104929/2023/0702/f307eb38bb610ee27ce42516f84bc0d8.png)
+   ![](/images/upload/danmaku-overlay-20250625-122811.png)
 
    在 mpv.config 文件的一开始添加下面一行的内容：
 
+   ```mpv.conf
    **title=[mpv] ${filename} ${time-pos} ${speed}x**
+   ```
 
    这行配置的意思是修改mpv的窗口标题，让mpv在标题栏中显示当前视频的文件名、播放时间点和播放速度。修改后请关闭 mpv 播放器使其生效。
 
-   ![8ee5b64ba47f370822ade7e56b41cbb5.png](https://txc.gtimg.com/data/104929/2023/0915/8ee5b64ba47f370822ade7e56b41cbb5.png)
+   ![](/images/upload/danmaku-overlay-20250625-122826.png)
 
 3. 在弹弹play 【设置-播放器内核与字幕】 页面中选中【弹幕外挂 - mpv播放器】。点击【浏览 mpv 可执行文件】按钮选择您电脑中 mpv.exe 所在的位置。
 
-   ![9baf742235db8660155adc7d07e2104d.png](https://txc.gtimg.com/data/104929/2023/0702/9baf742235db8660155adc7d07e2104d.png)
+   ![](/images/upload/danmaku-overlay-20250625-122937.png)
 
 4. 从弹弹play中选择一个视频开始播放，弹弹play将自动启动 mpv 播放器，并覆盖弹幕层。
 
@@ -78,7 +80,7 @@
 
 2. 在弹弹play 【设置-播放器内核与字幕】 页面中选中【弹幕外挂 - MPC-HC/MPC-BE 播放器】。点击【浏览 MPC 可执行文件】按钮选择您电脑中 mpc-hc64.exe 或 mpc-be64.exe 所在的位置。
 
-   ![c464a847da1e96acd47d21f348238d2f.png](https://txc.gtimg.com/data/104929/2023/1014/c464a847da1e96acd47d21f348238d2f.png)
+   ![](/images/upload/danmaku-overlay-20250625-122951.png)
 
 3. 从弹弹play中选择一个视频开始播放，弹弹play将自动启动对应的 MPC 播放器，并覆盖弹幕层。
 

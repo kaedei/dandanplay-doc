@@ -12,7 +12,7 @@
 
 总体来说，当您加载视频后，弹幕的来源通常有下面这些：
 
-![弹幕来源概览](https://mmbiz.qpic.cn/mmbiz_jpg/8FH2fYzPNVj5Yl3VucUGicuePP1rgvbpdu2wM6ictmCx1aH6wRo8wag0b2WJYaC0g87bTDia0h0UzppSkeib7QticvA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/images/upload/load-danmaku-20250625-123714.png)
 
 但是这些弹幕来源的加载都是有条件的，下面会分别进行说明。
 
