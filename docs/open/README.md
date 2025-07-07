@@ -108,32 +108,58 @@
 @tab Java
 
 ```java
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
-import java.util.Date;
+// 导入所需的类库
+import java.security.MessageDigest;          // 用于计算SHA-256哈希
+import java.security.NoSuchAlgorithmException; // 处理不支持的算法异常
+import java.util.Base64;                      // 用于Base64编码
+import java.util.Date;                        // 用于获取当前时间
 
 public class SignatureGenerator {
     public static void main(String[] args) {
+        // 申请获得的应用ID和密钥（需要替换为实际值）
         String appId = "your_app_id";
         String appSecret = "your_app_secret";
 
+        // 生成当前时间戳（Unix时间戳，单位：秒）
         long timestamp = new Date().getTime() / 1000;
+        
+        // 定义要访问的API路径（不包含域名和查询参数）
         String path = "/api/v2/comment/123450001";
+        
+        // 调用签名生成方法
         String signature = generateSignature(appId, timestamp, path, appSecret);
 
+        // 输出HTTP请求头需要的三个字段
         System.out.println("X-AppId: " + appId);
         System.out.println("X-Signature: " + signature);
         System.out.println("X-Timestamp: " + timestamp);
     }
 
+    /**
+     * 生成签名的核心方法
+     * 算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+     * 
+     * @param appId 应用ID
+     * @param timestamp 时间戳
+     * @param path API路径
+     * @param appSecret 应用密钥
+     * @return 生成的签名字符串
+     */
     private static String generateSignature(String appId, long timestamp, String path, String appSecret) {
+        // 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
         String data = appId + timestamp + path + appSecret;
+        
         try {
+            // 创建SHA-256哈希算法实例
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            
+            // 计算数据的SHA-256哈希值
             byte[] hash = digest.digest(data.getBytes());
+            
+            // 将哈希值转换为Base64编码字符串
             return Base64.getEncoder().encodeToString(hash);
         } catch (NoSuchAlgorithmException e) {
+            // 处理SHA-256算法不支持的异常（通常不会发生）
             e.printStackTrace();
             return null;
         }
@@ -144,23 +170,45 @@ public class SignatureGenerator {
 @tab JavaScript
 
 ```javascript
+// 导入Node.js内置的crypto模块，用于加密运算
 const crypto = require('crypto');
 
+// 申请获得的应用ID和密钥（需要替换为实际值）
 const appId = 'your_app_id';
 const appSecret = 'your_app_secret';
+
+// 定义要访问的API路径（不包含域名和查询参数）
 const path = '/api/v2/comment/123450001';
+
+// 生成当前时间戳（Unix时间戳，单位：秒）
 const timestamp = Math.floor(Date.now() / 1000);
+
+// 调用签名生成函数
 const signature = generateSignature(appId, timestamp, path, appSecret);
 
+// 输出HTTP请求头需要的三个字段
 console.log('X-AppId: ' + appId);
 console.log('X-Signature: ' + signature);
 console.log('X-Timestamp: ' + timestamp);
 
+/**
+ * 生成签名的核心函数
+ * 算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+ * 
+ * @param {string} appId 应用ID
+ * @param {number} timestamp 时间戳
+ * @param {string} path API路径
+ * @param {string} appSecret 应用密钥
+ * @return {string} 生成的签名字符串
+ */
 function generateSignature(appId, timestamp, path, appSecret) {
+    // 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
     const data = appId + timestamp + path + appSecret;
-    return crypto.createHash('sha256').
-        update(data).
-        digest('base64');
+    
+    // 使用crypto模块计算SHA-256哈希，并转换为Base64编码
+    return crypto.createHash('sha256').  // 创建SHA-256哈希对象
+        update(data).                    // 输入要哈希的数据
+        digest('base64');                // 计算哈希值并转换为Base64格式
 }
 ```
 
@@ -169,18 +217,42 @@ function generateSignature(appId, timestamp, path, appSecret) {
 ```php
 <?php
 
+/**
+ * 生成签名的核心函数
+ * 算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+ * 
+ * @param string $appId 应用ID
+ * @param int $timestamp 时间戳
+ * @param string $path API路径
+ * @param string $appSecret 应用密钥
+ * @return string 生成的签名字符串
+ */
 function generateSignature($appId, $timestamp, $path, $appSecret) {
+    // 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
     $data = $appId . $timestamp . $path . $appSecret;
+    
+    // 使用PHP内置的hash函数计算SHA-256哈希值
+    // 第三个参数为true表示返回原始二进制数据（而不是十六进制字符串）
     $hash = hash('sha256', $data, true);
+    
+    // 将二进制哈希值转换为Base64编码字符串
     return base64_encode($hash);
 }
 
+// 申请获得的应用ID和密钥（需要替换为实际值）
 $appId = 'your_app_id';
 $appSecret = 'your_app_secret';
+
+// 定义要访问的API路径（不包含域名和查询参数）
 $path = '/api/v2/comment/123450001';
+
+// 生成当前时间戳（Unix时间戳，单位：秒）
 $timestamp = time();
+
+// 调用签名生成函数
 $signature = generateSignature($appId, $timestamp, $path, $appSecret);
 
+// 输出HTTP请求头需要的三个字段
 echo "X-AppId: $appId\n";
 echo "X-Signature: $signature\n";
 echo "X-Timestamp: $timestamp\n";
@@ -189,32 +261,55 @@ echo "X-Timestamp: $timestamp\n";
 @tab .NET
 
 ```csharp
-using System;
-using System.Security.Cryptography;
-using System.Text;
+// 导入所需的命名空间
+using System;                            // 基础类库
+using System.Security.Cryptography;      // 用于加密运算
+using System.Text;                       // 用于文本编码处理
 
 class SignatureGenerator
 {
     static void Main()
     {
+        // 申请获得的应用ID和密钥（需要替换为实际值）
         string appId = "your_app_id";
         string appSecret = "your_app_secret";
+        
+        // 定义要访问的API路径（不包含域名和查询参数）
         string path = "/api/v2/comment/123450001";
+        
+        // 生成当前时间戳（Unix时间戳，单位：秒）
         long timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
+        // 调用签名生成方法
         string signature = GenerateSignature(appId, timestamp, path, appSecret);
 
+        // 输出HTTP请求头需要的三个字段
         Console.WriteLine("X-AppId: " + appId);
         Console.WriteLine("X-Signature: " + signature);
         Console.WriteLine("X-Timestamp: " + timestamp);
     }
 
+    /// <summary>
+    /// 生成签名的核心方法
+    /// 算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+    /// </summary>
+    /// <param name="appId">应用ID</param>
+    /// <param name="timestamp">时间戳</param>
+    /// <param name="path">API路径</param>
+    /// <param name="appSecret">应用密钥</param>
+    /// <returns>生成的签名字符串</returns>
     private static string GenerateSignature(string appId, long timestamp, string path, string appSecret)
     {
+        // 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
         string data = appId + timestamp + path + appSecret;
+        
+        // 使用using语句确保SHA256对象被正确释放
         using (SHA256 sha256 = SHA256.Create())
         {
+            // 将拼接的字符串转换为UTF-8字节数组，然后计算SHA-256哈希值
             byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(data));
+            
+            // 将哈希值转换为Base64编码字符串
             return Convert.ToBase64String(hash);
         }
     }
@@ -224,21 +319,50 @@ class SignatureGenerator
 @tab Python
 
 ```python
-import hashlib
-import base64
-import time
+# 导入所需的模块
+import hashlib    # 用于哈希运算
+import base64     # 用于Base64编码
+import time       # 用于获取当前时间
 
 def generate_signature(app_id, timestamp, path, app_secret):
+    """
+    生成签名的核心函数
+    算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+    
+    参数:
+        app_id (str): 应用ID
+        timestamp (int): 时间戳
+        path (str): API路径
+        app_secret (str): 应用密钥
+    
+    返回:
+        str: 生成的签名字符串
+    """
+    # 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
     data = f"{app_id}{timestamp}{path}{app_secret}"
+    
+    # 使用hashlib计算SHA-256哈希值
+    # encode()将字符串转换为字节，digest()返回二进制哈希值
     sha256_hash = hashlib.sha256(data.encode()).digest()
+    
+    # 将二进制哈希值转换为Base64编码字符串
+    # decode()将字节转换回字符串
     return base64.b64encode(sha256_hash).decode()
 
+# 申请获得的应用ID和密钥（需要替换为实际值）
 app_id = 'your_app_id'
 app_secret = 'your_app_secret'
+
+# 定义要访问的API路径（不包含域名和查询参数）
 path = '/api/v2/comment/123450001'
+
+# 生成当前时间戳（Unix时间戳，单位：秒）
 timestamp = int(time.time())
+
+# 调用签名生成函数
 signature = generate_signature(app_id, timestamp, path, app_secret)
 
+# 输出HTTP请求头需要的三个字段
 print(f"X-AppId: {app_id}")
 print(f"X-Signature: {signature}")
 print(f"X-Timestamp: {timestamp}")
@@ -250,25 +374,50 @@ print(f"X-Timestamp: {timestamp}")
 package main
 
 import (
-	"crypto/sha256"
-	"encoding/base64"
-	"fmt"
-	"time"
+	"crypto/sha256"     // 用于SHA-256哈希运算
+	"encoding/base64"   // 用于Base64编码
+	"fmt"              // 用于格式化输出
+	"time"             // 用于获取当前时间
 )
 
+// generateSignature 生成签名的核心函数
+// 算法：base64(sha256(AppId + Timestamp + Path + AppSecret))
+//
+// 参数:
+//   appId: 应用ID
+//   timestamp: 时间戳
+//   path: API路径
+//   appSecret: 应用密钥
+//
+// 返回值:
+//   string: 生成的签名字符串
 func generateSignature(appId string, timestamp int64, path string, appSecret string) string {
+	// 按照指定顺序拼接字符串：AppId + Timestamp + Path + AppSecret
 	data := fmt.Sprintf("%s%d%s%s", appId, timestamp, path, appSecret)
+	
+	// 使用SHA-256算法计算哈希值
 	hash := sha256.Sum256([]byte(data))
+	
+	// 将哈希值（字节数组）转换为Base64编码字符串
+	// hash[:]将数组转换为切片，以便传递给base64.StdEncoding.EncodeToString
 	return base64.StdEncoding.EncodeToString(hash[:])
 }
 
 func main() {
+	// 申请获得的应用ID和密钥（需要替换为实际值）
 	appId := "your_app_id"
 	appSecret := "your_app_secret"
+	
+	// 定义要访问的API路径（不包含域名和查询参数）
 	path := "/api/v2/comment/123450001"
+	
+	// 生成当前时间戳（Unix时间戳，单位：秒）
 	timestamp := time.Now().Unix()
+	
+	// 调用签名生成函数
 	signature := generateSignature(appId, timestamp, path, appSecret)
 
+	// 输出HTTP请求头需要的三个字段
 	fmt.Printf("X-AppId: %s\n", appId)
 	fmt.Printf("X-Signature: %s\n", signature)
 	fmt.Printf("X-Timestamp: %d\n", timestamp)
