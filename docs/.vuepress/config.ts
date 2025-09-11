@@ -80,6 +80,7 @@ export default defineUserConfig({
                     '/function/medialibrary-remote-dandanplay.md',
                     '/function/medialibrary-remote-onedrive.md',
                     '/function/medialibrary-remote-plex.md',
+                    '/function/screenshot-gif.md'
                 ]
             },
             {

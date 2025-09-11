@@ -34,6 +34,7 @@
   - [连接到远程电脑上的弹弹play（PC版）](function/medialibrary-remote-dandanplay.html)
   - [连接到OneDrive个人版网盘](function/medialibrary-remote-onedrive.html)
   - [连接到远程Plex媒体服务器](function/medialibrary-remote-plex.md)
+  - [截取GIF动图](screenshot-gif.html)
 
 - [弹弹play开放平台](open/README.md)
   - [API 变动日志](open/changelog.md)
