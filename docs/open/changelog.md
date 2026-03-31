@@ -2,6 +2,21 @@
 
 [[TOC]]
 
+## 2026年4月1日
+
+### Related/ExtComment API 下线
+
+由于业务调整，且现有调用量极少等原因，我们将在2026年4月下线以下两个API：
+- /api/v2/related
+- /api/v2/extcomment
+
+如果您的应用正在使用此API，建议统一迁移至 `/api/v2/comment/{episodeId}?withRelated=true`
+
+### 弹弹play规范名称说明
+
+1. 如果您的项目中已接入弹弹play开放平台，请记得在 README、关于 等文档处标明接入了“**弹弹play开放平台**”以及官网地址“**www.dandanplay.com**”。
+2. UI中显示相关内容时，请使用“**弹弹play**”的全名，而不是”弹弹“、”dandan“等简称。
+
 ## 2025年6月16日
 
 ### 性能优化
