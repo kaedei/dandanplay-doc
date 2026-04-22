@@ -2,6 +2,7 @@
 
 ## 发布说明
 
+[17.2](https://mp.weixin.qq.com/s/kaRYsQgLzoH0m1atEE9UvQ)|
 [17.1](https://mp.weixin.qq.com/s/MP8B6CIatanRcgnmQi1lrA)|
 [16.5](https://mp.weixin.qq.com/s/C-Mnb_6n1qw7sgoha8kfhA)| 
 [16.3](https://mp.weixin.qq.com/s/5z99-3A-bxq2DC20D5wArg)| 
