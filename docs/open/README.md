@@ -1,5 +1,6 @@
 # 弹弹play开放平台
 
+[开发者中心 · DevCenter](https://dev.dandanplay.com) |
 [接口文档及在线调试工具](https://api.dandanplay.net/swagger) |
 [弹弹play服务状态页](https://stats.uptimerobot.com/DV0BKUo2g9) |
 [开发者交流群(QQ)](https://qm.qq.com/q/D2nRsB3mCY) |
@@ -39,7 +40,8 @@
 
 不论是公开项目或是私有项目，只要遵守弹弹play开放平台的使用规定，都可以申请接入开放平台。您可以通过以下方式申请 AppId 和 AppSecret：
 
-- 发送邮件至 `kaedei@dandanplay.net`，邮件标题为 `弹弹play开放平台申请`，内容包括您的应用名称（中文、英文）、应用描述、应用类型、联系方式、GitHub仓库页面等必要信息。
+- **【推荐】** 访问 [开发者中心 · DevCenter](https://dev.dandanplay.com) 注册账号，完善开发者资料并通过邮件验证后，在【应用管理】页面创建应用并提交审核。
+- 或是发送邮件至 `kaedei@dandanplay.net`，邮件标题为 `弹弹play开放平台申请`，内容包括您的应用名称（中文、英文）、应用描述、应用类型、联系方式、GitHub仓库页面等必要信息。（可能需要等待较长时间才能收到回复，敬请谅解）
 
 我们将在收到您的申请后尽快处理，并通过邮件或QQ通知您。
 
@@ -560,4 +562,6 @@ func main() {
 
 如有任何问题或需要进一步帮助，请加QQ群联系管理员。
 
-后续会上线开发者中心网站，方便开发者查看应用程序的 API 使用情况、自助更换凭证、查看文档等。
+也可以发送邮件到：`kaedei@dandanplay.net`，邮件标题为 `弹弹play开放平台咨询`，内容包括您的问题描述、应用名称、联系方式等必要信息。
+
+弹弹play开放平台 开发者中心 · DevCenter: [https://dev.dandanplay.com](https://dev.dandanplay.com) 已上线，欢迎访问。
