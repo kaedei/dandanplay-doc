@@ -36,7 +36,7 @@
   - [连接到远程Plex媒体服务器](function/medialibrary-remote-plex.md)
   - [截取GIF动图](function/screenshot-gif.html)
 
-- [弹弹play开放平台](open/README.md)
+- [弹弹play开放弹幕网络](open/README.md)
   - [API 变动日志](open/changelog.md)
 
 - [客户端更新日志](changelog/README.md)

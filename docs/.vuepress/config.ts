@@ -98,7 +98,7 @@ export default defineUserConfig({
                 ]
             },
             {
-                text: '开放平台',
+                text: '开放弹幕网络',
                 link: '/open/',
                 children: [
                     '/open/README.md',
