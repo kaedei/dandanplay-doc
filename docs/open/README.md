@@ -1,6 +1,6 @@
 # 弹弹play开放弹幕网络
 
-![弹弹play开放弹幕网络](/images/upload/devcenter_1.png)
+![开发者中心 · DevCenter](/images/upload/devcenter_1.png)
 [开发者中心 · DevCenter](https://dev.dandanplay.com) |
 ![Swagger工具](/images/upload/swagger_1.png)
 [接口文档及在线调试工具](https://api.dandanplay.net/swagger) |
@@ -43,7 +43,7 @@
 - **关注与播放历史**：管理用户的关注和播放历史，提供个性化的推荐和回顾功能。
 - **用户登录与注册**：提供用户登录和注册功能，方便开发者在自己的应用中集成用户管理和身份验证功能。
 
-部分功能需要更高的权限才能访问，详情请参见[API 权限和使用范围说明](#8-api-权限和使用范围说明)。
+部分功能需要更高的权限才能访问，详情请参见[API 权限和使用范围说明](#_8-api-权限和使用范围说明)。
 
 ## 二、API 接入指南
 
@@ -60,7 +60,7 @@
 
 不论是公开项目或是私有项目，只要遵守弹弹play开放弹幕网络的使用规定，都可以申请接入本服务。您可以通过以下方式申请 AppId 和 AppSecret：
 
-- 访问 [弹弹play开放弹幕网络开发者中心 · DevCenter](https://dev.dandanplay.com) 注册账号，完善开发者资料并通过邮件验证后，在【应用管理】页面创建应用并提交审核。网站部分组件可能需要科学上网才能正常显示。
+- 访问 ![开发者中心 · DevCenter](/images/upload/devcenter_1.png)[弹弹play开放弹幕网络开发者中心 · DevCenter](https://dev.dandanplay.com) 注册账号，完善开发者资料并通过邮件验证后，在【应用管理】页面创建应用并提交审核。网站部分组件可能需要科学上网才能正常显示。
 
 我们将在收到您的申请后尽快处理，并通过邮件和系统内留言功能通知您审核进展。
 
@@ -559,7 +559,7 @@ func main() {
 
 ### 11. 客户端调用流程
 
-[接口文档及在线调试工具](https://api.dandanplay.net/swagger)
+![Swagger工具](/images/upload/swagger_1.png)[接口文档及在线调试工具](https://api.dandanplay.net/swagger)
 
 #### (1) 使用文件识别或搜索，得到节目编号
 首先，在打开视频文件的时候，客户端应该调用 **文件识别 API**（`/api/v2/match`），传递视频文件名、hash、长度、大小之后，服务器端对文件进行识别。文件识别 API 会返回一个“此文件可能是...”的列表，用户需要在此列表中选择一个最适合的项目。
@@ -584,7 +584,5 @@ func main() {
 如有任何问题或需要进一步帮助，可以通过以下渠道联系我们：
 
 - 加入弹弹play开放弹幕网络官方QQ群联系管理员。
-- 注册进入 [弹弹play开放弹幕网络开发者中心 · DevCenter](https://dev.dandanplay.com) 后，在【留言】页面选择您已创建的应用，并提交您的问题。
+- 注册进入 ![开发者中心 · DevCenter](/images/upload/devcenter_1.png)[弹弹play开放弹幕网络开发者中心 · DevCenter](https://dev.dandanplay.com) 后，在【留言】页面选择您已创建的应用，并提交您的问题。
 - 发送邮件到：`kaedei@dandanplay.net`，邮件标题为 `弹弹play开放弹幕网络咨询`，内容包括您的问题描述、应用名称、联系方式等必要信息。
-
-弹弹play开放弹幕网络 开发者中心 · DevCenter: [https://dev.dandanplay.com](https://dev.dandanplay.com) 已上线，欢迎访问。

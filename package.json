@@ -8,15 +8,18 @@
     "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.19",
-    "@vuepress/client": "^2.0.0-rc.19",
-    "@vuepress/plugin-search": "^2.0.0-rc.74",
-    "@vuepress/theme-default": "^2.0.0-rc.74",
-    "sass": "^1.84.0",
-    "vue": "^3.3.4",
-    "vuepress": "^2.0.0-rc.19"
+    "@vuepress/bundler-vite": "^2.0.0-rc.30",
+    "@vuepress/client": "^2.0.0-rc.30",
+    "@vuepress/plugin-search": "^2.0.0-rc.131",
+    "@vuepress/theme-default": "^2.0.0-rc.131",
+    "sass": "^1.101.0",
+    "vue": "^3.5.34",
+    "vuepress": "^2.0.0-rc.30"
   }
 }
