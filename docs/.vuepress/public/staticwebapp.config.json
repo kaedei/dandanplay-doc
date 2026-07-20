@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "route": "/changelog/README.md",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}
